@@ -2,6 +2,8 @@ package board;
 
 import lombok.*;
 
+import java.sql.Date;
+
 @Getter
 @Setter
 @NoArgsConstructor
@@ -13,4 +15,6 @@ public class Board {
     private String password;
     private String title;
     private String content;
+    private Date wdate;
+    private int views;
 }

@@ -1,11 +1,13 @@
 package board.controller;
 
+import board.Board;
 import board.BoardService;
 
 import javax.servlet.*;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
 import java.io.IOException;
+import java.util.ArrayList;
 
 @WebServlet("/board/list")
 public class BoardList extends HttpServlet {
@@ -20,9 +22,13 @@ public class BoardList extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.setAttribute("list", service.allBoardList());
+        ArrayList<Board> list = service.allBoardList();
 
-        System.out.println("/board/list 통과");
+        System.out.println("list.size:" + list.size());
+
+        request.setAttribute("list", list);
+
+        System.out.println("/board/list get 통과");
 
         dis = request.getRequestDispatcher("/board/list.jsp");
         dis.forward(request, response);
@@ -30,6 +36,15 @@ public class BoardList extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        ArrayList<Board> list = service.allBoardList();
 
+        System.out.println("list.size:" + list.size());
+
+        request.setAttribute("list", list);
+
+        System.out.println("/board/list post 통과");
+
+        dis = request.getRequestDispatcher("/board/list.jsp");
+        dis.forward(request, response);
     }
 }

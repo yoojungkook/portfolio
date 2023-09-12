@@ -1,10 +1,11 @@
 package member.controller;
+
 import javax.servlet.*;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
 import java.io.IOException;
 
-@WebServlet("/MemberLogIn")
+@WebServlet("/member/login")
 public class MemberLogIn extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
