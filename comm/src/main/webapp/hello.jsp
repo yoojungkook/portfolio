@@ -11,7 +11,7 @@
 <body>
 	<div class="container-sm">
 		<h1>로그인</h1>
-		<form id="login" action="${pageContext.request.contextPath}/member/login" method="post">
+		<form id="login" action="/comm/member/login" method="post">
 			<div class="mb-3">
 				<label for="exampleFormControlInput1" class="form-label">아이디</label>
 				<input type="text" class="form-control" id="id" placeholder="이메일" name="id">

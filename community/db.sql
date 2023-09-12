@@ -17,3 +17,15 @@ insert into member values(seq_member_no.nextval, 'abcd', '1234');
 
 --- 회원 테이블 no 시퀀스
 create sequence seq_member_no;
+
+--- 게시판 테이블
+CREATE TABLE BOARD(
+    NO              NUMBER              PRIMARY KEY,
+    ID              VARCHAR2(50)        DEFAULT 'NoN',
+    PASSWORD        VARCHAR2(50)        DEFAULT '',
+    TITLE           VARCHAR2(50)        NOT NULL,
+    CONTENT         VARCHAR2(50)        NOT NULL
+);
+
+--- 게시판 테이블 no 시퀀스
+create sequence seq_board_no;
