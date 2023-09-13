@@ -11,7 +11,7 @@
 <body>
 	<div class="container-sm">
 		<h1>로그인</h1>
-		<form id="login" action="/comm/member/login" method="post">
+		<form action="/comm/member/login" method="post">
 			<div class="mb-3">
 				<label for="exampleFormControlInput1" class="form-label">아이디</label>
 				<input type="text" class="form-control" id="id" placeholder="이메일" name="id">
@@ -21,6 +21,14 @@
 				<input type="password" class="form-control" id="password" placeholder="비밀번호" name="password">
 			</div>
 			<input type="submit" class="btn btn-outline-success" value="Success" style="width: 100%">
+		</form>
+
+		<br/>
+
+		<form action="/comm/member/join" method="get">
+			<div style="width: 100%">
+				<input class="btn btn-primary" type="submit" value="Input" style="width: 100%">
+			</div>
 		</form>
 	</div>
 </body>
