@@ -6,7 +6,7 @@ import org.apache.ibatis.session.SqlSessionFactory;
 import connect.Factory;
 
 public class MemberService {
-private SqlSessionFactory sqlSessionFactory;
+	private SqlSessionFactory sqlSessionFactory;
 	
 	public MemberService() {
 		sqlSessionFactory = Factory.getSqlSessionFactory();
