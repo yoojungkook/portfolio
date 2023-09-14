@@ -51,3 +51,52 @@ INSERT INTO BOARD(no, title, content, wdate) VALUES(SEQ_BOARD_NO.NEXTVAL, '7', '
 INSERT INTO BOARD(no, title, content, wdate) VALUES(SEQ_BOARD_NO.NEXTVAL, '8', '8-1', sysdate);
 INSERT INTO BOARD(no, title, content, wdate) VALUES(SEQ_BOARD_NO.NEXTVAL, '9', '9-1', sysdate);
 INSERT INTO BOARD(no, title, content, wdate) VALUES(SEQ_BOARD_NO.NEXTVAL, '10', '10-1', sysdate);
+
+서울 자치구
+1. 강남구
+2. 강동구
+3. 강북구
+4. 강서구
+5. 관악구
+6. 광진구
+7. 구로구
+8. 금천구
+9. 노원구
+10. 도봉구
+11. 동대문구
+12. 동작구
+13. 마포구
+14. 서대문구
+15. 서초구
+16. 성동구
+17. 성북구
+18. 송파구
+19. 양천구
+20. 영등포구
+21. 용산구
+22. 은평구
+23. 종로구
+24. 중구
+25. 중랑구;
+
+create table region(
+                       no      number(2)       primary key,
+                       name    varchar2(20)    not null
+);
+
+INSERT INTO REGION VALUES(1, '서울특별시');
+
+create table seoul_autonomy(
+                               no          number(2)       primary key,
+                               name        varchar2(30)    not null,
+                               regionNo    number(2)       references region(no)
+);
+
+create sequence seoul_no;
+
+INSERT INTO SEOUL_AUTONOMY VALUES(seoul_no.nextval, '중랑구', 1);
+
+SELECT R.NO, R.NAME, S.NO, S.NAME
+FROM REGION R, SEOUL_AUTONOMY S
+WHERE R.NO = S.REGIONNO
+ORDER BY S.NO;
