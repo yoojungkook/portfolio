@@ -4,11 +4,14 @@ import com.oreilly.servlet.MultipartRequest;
 import com.oreilly.servlet.multipart.DefaultFileRenamePolicy;
 import member.Member;
 import member.MemberService;
+import region.SeoulRegion;
+import region.SeoulRegionService;
 
 import javax.servlet.*;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
 import java.io.IOException;
+import java.util.ArrayList;
 
 @WebServlet("/member/join")
 public class MemberJoin extends HttpServlet {
@@ -20,6 +23,11 @@ public class MemberJoin extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        SeoulRegionService seoulRegionService = new SeoulRegionService();
+        ArrayList<SeoulRegion> seoulAutonomyList = seoulRegionService.getSeoulAutonomyList();
+
+        request.setAttribute("seoulAutonomyList", seoulAutonomyList);
+
         RequestDispatcher dis = request.getRequestDispatcher("/member/join.jsp");
         dis.forward(request, response);
     }
@@ -38,6 +46,6 @@ public class MemberJoin extends HttpServlet {
         String password = request.getParameter("password");
 
         MemberService service = new MemberService();
-        service.addMember(new Member(0, id, password));
+//        service.addMember(new Member(0, id, password));
     }
 }

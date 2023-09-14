@@ -17,7 +17,7 @@ public class MemberService {
 	public Member loginCheck(String id, String password) {
 		session = sqlSessionFactory.openSession();//session open
 		dao = session.getMapper(MemberDao.class);//session을 통해 맵퍼 객체 획득
-		Member user = dao.select(id, password);
+		Member user = dao.selectCheck(id, password);
 		session.close();
 		
 		return user;

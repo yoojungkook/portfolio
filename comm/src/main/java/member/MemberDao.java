@@ -14,7 +14,7 @@ public interface MemberDao {
 	void insert(Member m);
 
 	@Select("select * from member where id=#{id} and password=#{password}")
-	Member select(@Param("id") String id, @Param("password") String password);
+	Member selectCheck(@Param("id") String id, @Param("password") String password);
 
 	@Select("select id from member where id = #{id}")
 	Member select(@Param("id") String id);

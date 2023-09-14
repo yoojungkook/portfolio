@@ -5,7 +5,8 @@
   Time: 오후 1:50
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" isELIgnored="false" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
     <meta charset="UTF-8">
@@ -17,66 +18,141 @@
     <div class="container-fluid">
         <div class="container-md">
             <h1>회원 가입</h1>
-            <form action="${pageContext.request.contextPath}/member/join" method="post" name="join" enctype="multipart/form-data">
-                <div class="mb-3">
-                    <label for="exampleFormControlId" class="form-label">아이디</label><input type="button" class="btn btn-secondary" onclick="check()" value="check">
-                    <input name="mId" type="text" class="form-control" placeholder="아이디 입력">
+            <form class="needs-validation" action="#" <%--action="${pageContext.request.contextPath}/member/join"--%> method="post" name="join" enctype="multipart/form-data" novalidate>
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="validationCustom01" name="id" placeholder="아이디 입력" required>
+                    <label for="validationCustom01">아이디</label>
+                    <div class="invalid-feedback">
+                        공백!
+                    </div>
                 </div>
 
-                <div class="mb-3">
-                    <label for="exampleFormControlPassword" class="form-label">비밀번호</label>
-                    <input name="mPassword" type="password" class="form-control"  placeholder="비밀번호 입력">
+                <div class="form-floating mb-3">
+                    <input type="password" class="form-control" id="user_password" name="password" placeholder="비밀번호 입력" required>
+                    <label for="floatingInput">비밀번호</label>
+                    <div class="invalid-feedback">
+                        공백!
+                    </div>
                 </div>
 
-                <div class="mb-3">
-                    <label for="exampleFormControlPasswordCheck" class="form-label">비밀번호 확인</label>
-                    <input name="cPassword" type="password" class="form-control"  placeholder="비밀번호 입력">
+                <div class="form-floating mb-3">
+                    <input type="password" class="form-control" id="user_cpassword" placeholder="비밀번호 재입력" required>
+                    <label for="floatingInput">비밀번호 확인</label>
+                    <div class="invalid-feedback">
+                        공백!
+                    </div>
                 </div>
 
-                <div class="mb-3">
-                    <label for="exampleFormControlName" class="form-label">이름</label>
-                    <input name="mName" type="text" class="form-control" placeholder="이름 입력">
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="user_name" placeholder="이름 입력" required>
+                    <label for="floatingInput">이름</label>
+                    <div class="valid-feedback">
+                        통과!
+                    </div>
+                    <div class="invalid-feedback">
+                        공백!
+                    </div>
                 </div>
 
-                <div class="mb-3">
-                    <label for="exampleFormControlEmail" class="form-label">이메일</label>
-                    <input name="mEmail" type="email" class="form-control"  placeholder="이메일 입력">
+                <div class="form-floating mb-3">
+                    <input type="email" class="form-control" id="user_email" placeholder="이메일 입력" required>
+                    <label for="floatingInput">이메일</label>
+                    <div class="valid-feedback">
+                        통과!
+                    </div>
+                    <div class="invalid-feedback">
+                        공백!
+                    </div>
                 </div>
 
-                <%--<input type="text" id="sample4_postcode" placeholder="우편번호">--%>
-                <%--<input type="text" id="sample4_roadAddress" placeholder="도로명주소">--%>
-                <%--<input type="text" id="sample4_jibunAddress" placeholder="지번주소">--%>
-                <%--<span id="guide" style="color:#999;display:none"></span>--%>
-                <%--<input type="text" id="sample4_detailAddress" placeholder="상세주소">--%>
-                <%--<input type="text" id="sample4_extraAddress" placeholder="참고항목"><br>--%>
-
-                <br/>
                 <div class="input-group mb-3">
-                    <input type="button" onclick="sample4_execDaumPostcode()" value="우편번호 찾기"><br/>
-                    <span class="input-group-text">우편번호</span>
-                    <input id="postcode" name="post" type="text" class="form-control" placeholder="우편번호" aria-label="" readonly>
-                    <span class="input-group-text">도로명 주소</span>
-                    <input id="roadAddress" name="road" type="text" class="form-control" placeholder="도로명 주소" aria-label="" readonly>
-                    <span class="input-group-text">지번주소</span>
-                    <input id="jibunAddress" name="jibun" type="text" class="form-control" placeholder="지번주소" aria-label="" readonly>
-                    <span class="input-group-text">상세주소</span>
-                    <input id="detailAddress" type="text" class="form-control" placeholder="상세주소" aria-label="">
-                    <span class="input-group-text">참고항목</span>
-                    <input id="extraAddress" type="text" class="form-control" placeholder="참고항목" aria-label="">
+                    <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" id="btn">Dropdown</button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#" >010</a></li>
+                        <li><a class="dropdown-item" href="#" >011</a></li>
+                        <li><a class="dropdown-item" href="#" >016</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">없음</a></li>
+                    </ul>
+                    <input type="text" class="form-control" aria-label="Text input with dropdown button" required>
+                    <div class="valid-feedback">
+                        통과!
+                    </div>
+                    <div class="invalid-feedback">
+                        공백!
+                    </div>
                 </div>
 
-                <label for="exampleFormControlPhoto" class="form-label">사진(선택사항)</label>
-                <div class="input-group">
-                    <input type="file" class="form-control" aria-describedby="inputGroupFileAddon04" aria-label="선택" onchange="readURL(this)">
+                <div class="form-floating mb-3">
+                    <div class="col-md-4">
+                        <label for="floatingInput">생일 입력</label>
+                        <input type="date" class="form-control" id="user_date" required>
+                    </div>
+                    <div class="valid-feedback">
+                        통과!
+                    </div>
+                    <div class="invalid-feedback">
+                        공백!
+                    </div>
                 </div>
-                <img id="preview" style="display: none; width: 300px; height: 300px;"/>
 
-                <br/>
+                <div class="row g-3">
+                    <div class="col-md-4">
+                        <label for="validationCustom04" class="form-label">지역구 선택</label>
+                        <select class="form-select" id="autonomy" required>
+                            <option selected disabled value="">자치구 선택</option>
+                            <c:forEach var="s" items="${seoulAutonomyList}">
+                                <option>${s.autonomyName}</option>
+                            </c:forEach>
+                        </select>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="validationDefault03" class="form-label">선택된 지역구</label>
+                        <input type="text" class="form-control" id="validationDefault03" required>
+                    </div>
+                    <div class="valid-feedback">
+                        통과!
+                    </div>
+                    <div class="invalid-feedback">
+                        공백!
+                    </div>
+                </div><br/>
 
-                <input type="submit" class="btn btn-outline-success" value="Success" style="width: 100%">
+                <div class="row g-3">
+                    <div class="col-md-4">
+                        <label for="exampleFormControlPhoto" class="form-label">사진(선택사항)</label>
+                        <div class="input-group">
+                            <input type="file" class="form-control" aria-describedby="inputGroupFileAddon04" aria-label="선택" onchange="readURL(this)" >
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="exampleFormControlPhotoPick" class="form-label" id="photo_thumbnail"></label>
+                        <div class="input-group">
+                            <img id="preview" class="img-thumbnail" style="display: none; width: 200px; height: 200px" alt="..."/>
+                        </div>
+                    </div>
+                </div><br/>
+
+                <button type="submit" class="btn btn-outline-success" style="width: 100%">Success</button>
             </form>
         </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script>
+        const liList = document.querySelectorAll(".dropdown-item");
+
+        const btn = document.getElementById("btn");
+
+        liList.forEach(function(li) {
+
+            li.addEventListener('click', function() {
+
+                btn.innerHTML = li.innerText;
+
+            });
+
+        });
+    </script>
     <script type="text/javascript">
         const check = () => {
             let id = document.join.mId.value;
@@ -123,74 +199,38 @@
                 reader.onload = function(e) {
                     document.getElementById('preview').src = e.target.result;
                     preview.style.display = "block";
-                    console.log("3");
+
+                    document.getElementById('photo_thumbnail').innerHTML = "사진 썸네일"
                 };
                 reader.readAsDataURL(input.files[0]);
-                console.log("1");
             } else {
                 document.getElementById('preview').src = "";
                 alert("else!");
             }
-            console.log("2");
         }
     </script>
-    <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
-    <script>
-        //본 예제에서는 도로명 주소 표기 방식에 대한 법령에 따라, 내려오는 데이터를 조합하여 올바른 주소를 구성하는 방법을 설명합니다.
-        function sample4_execDaumPostcode() {
-            new daum.Postcode({
-                oncomplete: function(data) {
-                    // 팝업에서 검색결과 항목을 클릭했을때 실행할 코드를 작성하는 부분.
+    <script type="text/javascript">
+        (() => {
+            'use strict'
 
-                    // 도로명 주소의 노출 규칙에 따라 주소를 표시한다.
-                    // 내려오는 변수가 값이 없는 경우엔 공백('')값을 가지므로, 이를 참고하여 분기 한다.
-                    var roadAddr = data.roadAddress; // 도로명 주소 변수
-                    var extraRoadAddr = ''; // 참고 항목 변수
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            const forms = document.querySelectorAll('.needs-validation');
 
-                    // 법정동명이 있을 경우 추가한다. (법정리는 제외)
-                    // 법정동의 경우 마지막 문자가 "동/로/가"로 끝난다.
-                    if(data.bname !== '' && /[동|로|가]$/g.test(data.bname)){
-                        extraRoadAddr += data.bname;
-                    }
-                    // 건물명이 있고, 공동주택일 경우 추가한다.
-                    if(data.buildingName !== '' && data.apartment === 'Y'){
-                        extraRoadAddr += (extraRoadAddr !== '' ? ', ' + data.buildingName : data.buildingName);
-                    }
-                    // 표시할 참고항목이 있을 경우, 괄호까지 추가한 최종 문자열을 만든다.
-                    if(extraRoadAddr !== ''){
-                        extraRoadAddr = ' (' + extraRoadAddr + ')';
-                    }
-
-                    // 우편번호와 주소 정보를 해당 필드에 넣는다.
-                    document.getElementById('sample4_postcode').value = data.zonecode;
-                    document.getElementById("sample4_roadAddress").value = roadAddr;
-                    document.getElementById("sample4_jibunAddress").value = data.jibunAddress;
-
-                    // 참고항목 문자열이 있을 경우 해당 필드에 넣는다.
-                    if(roadAddr !== ''){
-                        document.getElementById("sample4_extraAddress").value = extraRoadAddr;
+            // Loop over them and prevent submission
+            Array.from(forms).forEach(form => {
+                form.addEventListener('submit', event => {
+                    if (!form.checkValidity()) {
+                        event.preventDefault()
+                        event.stopPropagation()
+                        console.log("1L: " + forms.item(this).password); // 태그 그 자체를 출력
                     } else {
-                        document.getElementById("sample4_extraAddress").value = '';
+                        console.log("2L: " + forms.item(this).id.valueOf());
                     }
 
-                    var guideTextBox = document.getElementById("guide");
-                    // 사용자가 '선택 안함'을 클릭한 경우, 예상 주소라는 표시를 해준다.
-                    if(data.autoRoadAddress) {
-                        var expRoadAddr = data.autoRoadAddress + extraRoadAddr;
-                        guideTextBox.innerHTML = '(예상 도로명 주소 : ' + expRoadAddr + ')';
-                        guideTextBox.style.display = 'block';
-
-                    } else if(data.autoJibunAddress) {
-                        var expJibunAddr = data.autoJibunAddress;
-                        guideTextBox.innerHTML = '(예상 지번 주소 : ' + expJibunAddr + ')';
-                        guideTextBox.style.display = 'block';
-                    } else {
-                        guideTextBox.innerHTML = '';
-                        guideTextBox.style.display = 'none';
-                    }
-                }
-            }).open();
-        }
+                    form.classList.add('was-validated')
+                }, false)
+            });
+        })()
     </script>
 </body>
 </html>
