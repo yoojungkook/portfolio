@@ -17,11 +17,7 @@ public class Member {
 	private String email;
 	private Date birth;
 	private String phone;
-	private int postcode;
-	private String roadAddress;
-	private String jibunAddress;
-	private String detailAddress;
-	private String extraAddress;
+	private String autonomy;
 	private Date mDate;
 	private String photo;
 	private Date lastLog;

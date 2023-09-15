@@ -8,8 +8,7 @@ import org.apache.ibatis.annotations.Select;
 @Mapper
 public interface MemberDao {
 	@Insert("insert into member values(seq_member_no.nextval, #{id}, #{password}," +
-			"#{name}, #{email}, #{birth}, #{phone}, #{postcode}, #{roadAddress}," +
-			"#{jibunAddress}, #{detailAddress}, #{extraAddress}, #{mDate}, #{photo}," +
+			"#{name}, #{email}, #{birth}, #{phone}, #{autonomy}, sysdate, #{photo}," +
 			"sysdate, sysdate)")
 	void insert(Member m);
 

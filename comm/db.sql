@@ -13,12 +13,12 @@ create table member(
     id              varchar2(50)            unique,             -- 아이디
     password        varchar2(50)            not null,           -- 비밀번호
     name            varchar2(30)            not null,           -- 이름
-    email           varchar2(50)            not null,           -- 이메일
+    email           varchar2(50)            unique,           -- 이메일
     birth           date                    not null,           -- 생일
-    phone           varchar2(30)            not null,           -- 폰 번호
+    phone           varchar2(30)            unique,           -- 폰 번호
     autonomy        varchar2(10)            not null,           -- 서울 자치구(25개 중 하나)
     mDate           date                    default sysdate,    -- 생성 날짜
-    photo           varchar2(200),                              -- path경로 컬럼
+    photo           varchar2(200),                              -- 프로필 사진 이름(xxx.jpg)
     lastLog         date,                                       -- 마지막 로그인 날짜
     logout          date                                        -- 최근 로그아웃 날짜
 );

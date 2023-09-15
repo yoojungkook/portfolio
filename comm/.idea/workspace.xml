@@ -10,8 +10,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="00de42c8-500d-464d-8147-eaf2c054dbaa" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/connect/VarPath.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sql" beforeDir="false" afterPath="$PROJECT_DIR$/db.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/connect/CharEncoding.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/connect/CharEncoding.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/connect/Factory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/connect/Factory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/member/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/member/Member.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/member/MemberDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/member/MemberDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/member/MemberService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/member/MemberService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/member/controller/MemberJoin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/member/controller/MemberJoin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/member/controller/MemberLogIn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/member/controller/MemberLogIn.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/css/bootstrap.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/board/detail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/board/detail.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/board/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/board/list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/hello.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/hello.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/member/join.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/member/join.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -188,7 +202,9 @@
       <workItem from="1694664113319" duration="3690000" />
       <workItem from="1694679091667" duration="9236000" />
       <workItem from="1694688540401" duration="25000" />
-      <workItem from="1694688584787" duration="13000" />
+      <workItem from="1694688584787" duration="56000" />
+      <workItem from="1694736162535" duration="31000" />
+      <workItem from="1694754055520" duration="19001000" />
     </task>
     <servers />
   </component>

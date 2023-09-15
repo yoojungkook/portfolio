@@ -36,6 +36,7 @@ public class MemberLogIn extends HttpServlet {
             path = "/board/list";
         } else {
             path = "/hello.jsp";
+            request.setAttribute("fail", "로그인 실패");
         }
 
         System.out.println("post path:" + path);

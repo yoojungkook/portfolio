@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+		 pageEncoding="UTF-8" isELIgnored="false" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,13 +12,13 @@
 <body>
 	<div class="container-sm">
 		<h1>로그인</h1>
-		<form action="/comm/member/login" method="post">
+		<form action="${pageContext.request.contextPath}/member/login" method="post">
 			<div class="mb-3">
-				<label for="exampleFormControlInput1" class="form-label">아이디</label>
+				<label for="id" class="form-label">아이디</label>
 				<input type="text" class="form-control" id="id" placeholder="이메일" name="id">
 			</div>
 			<div class="mb-3">
-				<label for="exampleFormControlInput1" class="form-label">비밀번호</label>
+				<label for="password" class="form-label">비밀번호</label>
 				<input type="password" class="form-control" id="password" placeholder="비밀번호" name="password">
 			</div>
 			<input type="submit" class="btn btn-outline-success" value="Success" style="width: 100%">

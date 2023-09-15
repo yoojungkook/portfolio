@@ -16,8 +16,6 @@ public class CharEncoding implements Filter {
         request.setCharacterEncoding("UTF-8");
         response.setCharacterEncoding("UTF-8");
 
-        System.out.println("필터 통과!");
-
         chain.doFilter(request, response);
     }
 

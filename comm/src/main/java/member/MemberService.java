@@ -36,6 +36,7 @@ public class MemberService {
 		session = sqlSessionFactory.openSession();
 		dao =  session.getMapper(MemberDao.class);
 		dao.insert(m);
+
 		session.commit();
 		session.close();
 	}
