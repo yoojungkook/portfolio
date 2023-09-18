@@ -9,11 +9,13 @@ import javax.servlet.http.*;
 import java.io.IOException;
 import java.util.ArrayList;
 
-@WebServlet("/board/list")
+@WebServlet( urlPatterns = {"/board/list", "/"})
 public class BoardList extends HttpServlet {
     private static final long serialVersionUID = 1L;
     private BoardService service;
     private RequestDispatcher dis;
+    private final int PAGE_5 = 5;
+    private final int PAGE_10 = 10;
 
     public BoardList() {
         super();
@@ -22,13 +24,14 @@ public class BoardList extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        ArrayList<Board> list = service.allBoardList();
+        String no = request.getParameter("no");
+        int currentPage = 0;
 
-        System.out.println("list.size:" + list.size());
-
-        request.setAttribute("list", list);
-
-        System.out.println("/board/list get 통과");
+        if(no == null) currentPage = 1;
+        else currentPage = Integer.parseInt(no);
+        request.setAttribute("list", service.getPageRowCount(currentPage, PAGE_5));
+        request.setAttribute("pages", (int)Math.ceil(Math.round((double)service.allBoardList().size()/PAGE_5)));
+        request.setAttribute("currentPage", currentPage);
 
         dis = request.getRequestDispatcher("/board/list.jsp");
         dis.forward(request, response);
@@ -38,11 +41,7 @@ public class BoardList extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         ArrayList<Board> list = service.allBoardList();
 
-        System.out.println("list.size:" + list.size());
-
         request.setAttribute("list", list);
-
-        System.out.println("/board/list post 통과");
 
         dis = request.getRequestDispatcher("/board/list.jsp");
         dis.forward(request, response);

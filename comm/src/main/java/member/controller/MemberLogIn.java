@@ -2,6 +2,7 @@ package member.controller;
 
 import member.Member;
 import member.MemberService;
+import org.json.simple.JSONObject;
 
 import javax.servlet.*;
 import javax.servlet.annotation.WebServlet;
@@ -13,37 +14,42 @@ public class MemberLogIn extends HttpServlet {
     private static final long serialVersionUID = 1L;
     private MemberService service;
     private RequestDispatcher dis;
+    private JSONObject obj;
 
     public MemberLogIn() {
         super();
         service = new MemberService();
+        obj = new JSONObject();
     }
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        request.setCharacterEncoding("utf-8");
+        response.setCharacterEncoding("utf-8");
 
+        HttpSession session = request.getSession(false);
+        if(session.getAttribute("loginId") != null) {
+            response.sendRedirect(request.getContextPath() + "/board/list");
+        } else {
+            response.sendRedirect(request.getContextPath() + "/member/login.jsp");
+        }
     }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        request.setCharacterEncoding("utf-8");
+        response.setCharacterEncoding("utf-8");
+
         String id = request.getParameter("id");
         String password = request.getParameter("password");
 
         Member m  = service.loginCheck(id, password);
-        String path = "";
-
         if(m != null) {
-            path = "/board/list";
-        } else {
-            path = "/hello.jsp";
-            request.setAttribute("fail", "로그인 실패");
+            HttpSession session = request.getSession();
+            session.setAttribute("loginId", m.getId());
+
+            System.out.println("세션 생성 성공 및 이동!");
+            response.sendRedirect(request.getContextPath() + "/board/list");
         }
-
-        System.out.println("post path:" + path);
-
-        response.sendRedirect(request.getContextPath() + path);
-
-//        dis = request.getRequestDispatcher(path);
-//        dis.forward(request, response);
     }
 }

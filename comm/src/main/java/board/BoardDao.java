@@ -13,4 +13,7 @@ public interface BoardDao {
 
     @Select("select * from board where no = #{no}")
     Board selectBoard(@Param("no") int no);
+
+    @Select("select * from (select rownum r, no, content, title, id, wdate, views  from board) where r between #{min} and #{max}")
+    ArrayList<Board> selectPageRow(@Param("min") int min, @Param("max") int max);
 }

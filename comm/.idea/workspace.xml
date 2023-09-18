@@ -10,22 +10,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="00de42c8-500d-464d-8147-eaf2c054dbaa" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/connect/VarPath.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sql" beforeDir="false" afterPath="$PROJECT_DIR$/db.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/connect/CharEncoding.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/connect/CharEncoding.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/connect/Factory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/connect/Factory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/member/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/member/Member.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/member/MemberDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/member/MemberDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/member/MemberService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/member/MemberService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/board/BoardDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/board/BoardDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/board/BoardService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/board/BoardService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/board/controller/BoardList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/board/controller/BoardList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/member/controller/LoginCheck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/member/controller/LoginCheck.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/member/controller/MemberJoin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/member/controller/MemberJoin.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/member/controller/MemberLogIn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/member/controller/MemberLogIn.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/css/bootstrap.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/board/detail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/board/detail.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/member/controller/MemberLogout.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/member/controller/MemberLogout.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/board/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/board/list.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/hello.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/hello.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/member/join.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/member/join.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,10 +30,10 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
-        <option value="New Servlet" />
         <option value="Jsp File" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="New Servlet" />
       </list>
     </option>
   </component>
@@ -94,6 +88,9 @@
       <recent name="C:\Users\KOSTA\portfolio\comm\src\main\resources" />
       <recent name="C:\Users\KOSTA\portfolio\comm\src\main\webapp" />
       <recent name="C:\Users\KOSTA\portfolio\comm\src\main\java" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\KOSTA\portfolio\comm\src\main\webapp\member" />
     </key>
   </component>
   <component name="RunManager">
@@ -205,6 +202,12 @@
       <workItem from="1694688584787" duration="56000" />
       <workItem from="1694736162535" duration="31000" />
       <workItem from="1694754055520" duration="19001000" />
+      <workItem from="1694995913123" duration="13000" />
+      <workItem from="1695009144871" duration="1367000" />
+      <workItem from="1695010566499" duration="185000" />
+      <workItem from="1695010771870" duration="481000" />
+      <workItem from="1695011278211" duration="2024000" />
+      <workItem from="1695024071647" duration="9270000" />
     </task>
     <servers />
   </component>

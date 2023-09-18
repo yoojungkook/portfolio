@@ -100,3 +100,22 @@ SELECT R.NO, R.NAME, S.NO, S.NAME
 FROM REGION R, SEOUL_AUTONOMY S
 WHERE R.NO = S.REGIONNO
 ORDER BY S.NO;
+
+--- 익명게시판 테이블
+CREATE TABLE anonymous_table(
+  no              number              primary key,
+  title           varchar2(100)       not null,
+  content         varchar2(200),
+  wdate           date                default sysdate,
+  e_titledate     date                default sysdate,
+  e_contentdate   date                default sysdate,
+  view            number              default 0
+);
+
+create table anonymous_table (
+    no            number            references anonymous_table(no),
+    o_title       varchar2(100)     references anonymous_table(title),
+    n_title       varchar2(100),
+    o_content     varchar2(200)     references anonymous_table(content),
+    n_content     varchar2(100),
+);

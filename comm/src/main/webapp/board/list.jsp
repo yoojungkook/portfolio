@@ -8,7 +8,28 @@
     <title>Insert title here</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
 </head>
-<body class="">
+<body>
+    <div class="container">
+        <div class="row" style="border-bottom: 1px solid black;">
+            <ul class="nav justify-content-end">
+                <c:choose>
+                    <c:when test="${sessionScope.loginId != null}">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">마이페이지</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-disabled="true" href="${pageContext.request.contextPath}/member/logout">로그아웃</a>
+                        </li>
+                    </c:when>
+                    <c:otherwise>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="${pageContext.request.contextPath}/member/login">로그인</a>
+                        </li>
+                    </c:otherwise>
+                </c:choose>
+            </ul>
+        </div>
+    </div>
     <div class="container">
         <div class="row">
             <nav class="navbar navbar-expand-lg">
@@ -53,7 +74,7 @@
         <div class="row">
             <div class="col-8">
                 <br/>
-                <h2 style="color: black; margin:0 auto; padding:0;">게시판 리스트</h2>
+                <h2 style="color: black; margin:0 auto; padding:0;">게시판 리스트<${pages}></h2>
                 <br/>
                 <table class="table table-hover">
                     <thead style="color: black">
@@ -73,6 +94,36 @@
                         </c:forEach>
                     </tbody>
                 </table>
+                <%-- 페이지네이션 --%>
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination">
+                        <%-- 이전 --%>
+                        <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+                        <%-- 페이지수 --%>
+                        <c:forEach var="i" begin="1" end="${pages}">
+                            <c:choose>
+                                <%-- 현재 페이지 --%>
+                                <c:when test="${currentPage == i}">
+                                    <li class="page-item active"><a class="page-link" href="#">${i}</a></li>
+                                </c:when>
+                                <%-- 현재 페이지가 아닌 다른 페이지 --%>
+                                <c:otherwise>
+                                    <li class="page-item"><a class="page-link" href="${pageContext.request.contextPath}//board/list?no=${i}">${i}</a></li>
+                                </c:otherwise>
+                            </c:choose>
+                        </c:forEach>
+                        <%-- 앞으로 --%>
+                        <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
             </div>
             <div class="col-4">
                 <br/>

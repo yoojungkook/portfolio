@@ -12,9 +12,6 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
 import java.io.File;
 import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Paths;
-import java.nio.file.StandardCopyOption;
 import java.sql.Date;
 import java.util.ArrayList;
 
@@ -90,6 +87,6 @@ public class MemberJoin extends HttpServlet {
         MemberService service = new MemberService();
         service.addMember(m);
 
-        response.sendRedirect(request.getContextPath() + "/hello.jsp");
+        response.sendRedirect(request.getContextPath() + "/member/login.jsp");
     }
 }
