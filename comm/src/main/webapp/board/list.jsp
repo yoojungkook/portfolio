@@ -9,73 +9,22 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
 </head>
 <body>
+    <%@include file="../common/header.jsp"%>
     <div class="container">
-        <div class="row" style="border-bottom: 1px solid black;">
-            <ul class="nav justify-content-end">
-                <c:choose>
-                    <c:when test="${sessionScope.loginId != null}">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">마이페이지</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-disabled="true" href="${pageContext.request.contextPath}/member/logout">로그아웃</a>
-                        </li>
-                    </c:when>
-                    <c:otherwise>
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="${pageContext.request.contextPath}/member/login">로그인</a>
-                        </li>
-                    </c:otherwise>
-                </c:choose>
-            </ul>
-        </div>
-    </div>
-    <div class="container">
-        <div class="row">
-            <nav class="navbar navbar-expand-lg">
-                <div class="container-fluid" style="font-size: 15px;">
-                    <a class="navbar-brand" href="#">사이트 이름 미정</a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">자유게시판</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">익명게시판</a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    흥미게시판
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">요리</a></li>
-                                    <li><a class="dropdown-item" href="#">음악</a></li>
-                                    <li><a class="dropdown-item" href="#">운동</a></li>
-                                    <li><a class="dropdown-item" href="#">게임</a></li>
-<%--                                    <li><hr class="dropdown-divider"></li>--%>
-<%--                                    <li><a class="dropdown-item" href="#">Something else here</a></li>--%>
-                                </ul>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link disabled" aria-disabled="true">개발중...</a>
-                            </li>
-                        </ul>
-                        <form class="d-flex" role="search">
-                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                            <button class="btn btn-outline-success" type="submit">Search</button>
-                        </form>
-                    </div>
-                </div>
-            </nav>
-        </div>
+        <%@ include file="../common/nav.jsp" %>
         <div class="row">
             <div class="col-8">
                 <br/>
                 <h2 style="color: black; margin:0 auto; padding:0;">게시판 리스트<${pages}></h2>
-                <br/>
+                <div class="btn-group" role="group" style="float: right">
+                    <button type="button" class="btn btn-outline-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                        선택
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">테이블</a></li>
+                        <li><a class="dropdown-item" href="#">카드</a></li>
+                    </ul>
+                </div>
                 <table class="table table-hover">
                     <thead style="color: black">
                         <tr>
