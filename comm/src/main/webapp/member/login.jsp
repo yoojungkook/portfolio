@@ -12,7 +12,7 @@
 <body>
 	<div class="container-sm">
 		<h1>로그인</h1>
-		<form action="${pageContext.request.contextPath}/member/login" method="post">
+		<form action="${pageContext.request.contextPath}/member/login" method="post" name="f">
 			<div class="mb-3">
 				<label for="id" class="form-label">아이디</label>
 				<input type="text" class="form-control" id="id" placeholder="이메일" name="id">
@@ -21,7 +21,10 @@
 				<label for="password" class="form-label">비밀번호</label>
 				<input type="password" class="form-control" id="password" placeholder="비밀번호" name="password">
 			</div>
-			<input type="submit" class="btn btn-outline-success" value="Success" style="width: 100%">
+			<div id="danger" style="display: none;" class="alert alert-danger" role="alert">
+				로그인 실패!
+			</div>
+			<input type="button" class="btn btn-outline-success" value="로그인" onclick="check()" style="width: 100%">
 		</form>
 
 		<br/>
@@ -32,5 +35,30 @@
 			</div>
 		</form>
 	</div>
+	<script type="text/javascript">
+		let req = new XMLHttpRequest();
+		let danger = document.getElementById("danger");
+
+		req.onload = function() {
+			let res = req.responseText;
+			let obj = JSON.parse(res);  // 받은 응답을 json으로 파싱
+			if(obj.flag == "false") {
+				alert("로그인 실패");
+				danger.style.display = "";
+			} else if(obj.flag == "true") {
+				f.submit();
+			}
+		}
+
+		const check = () => {
+			let id = document.getElementById("id").value;
+			let password = document.getElementById("password").value;
+			let param = "id=" + id + "&password=" + password;
+
+			req.open("post", "${pageContext.request.contextPath}/LoginCheck");
+			req.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+			req.send(param);
+		}
+	</script>
 </body>
 </html>
