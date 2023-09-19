@@ -14,7 +14,7 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active" aria-disabled="true" href="#">
-                            <img src="../images/noti.png" style="width: 50px; height: 50px" alt="...">
+                            <img src="C:\Users\KOSTA\Pictures\wall-e.jpg" style="width: 50px; height: 50px" alt="...">
                         </a>
                     </li>
                 </c:when>

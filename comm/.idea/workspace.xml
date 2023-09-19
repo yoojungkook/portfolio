@@ -10,11 +10,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="00de42c8-500d-464d-8147-eaf2c054dbaa" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/common/header.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/common/nav.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/common/footer.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/common/hotissue.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/common/menu.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/wall-e.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/board/controller/BoardList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/board/controller/BoardList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/board/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/board/list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/common/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/common/header.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,12 +68,13 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/User/portfolio/comm/src/main/webapp",
+    "last_opened_file_path": "C:/Users/KOSTA/portfolio/comm/src/main/webapp/images",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "모듈",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "vue.rearranger.settings.migration": "true"
@@ -78,16 +82,13 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\User\portfolio\comm\src\main\webapp" />
+      <recent name="C:\Users\KOSTA\portfolio\comm\src\main\webapp\images" />
       <recent name="C:\Users\KOSTA\portfolio\comm" />
       <recent name="C:\Users\KOSTA\portfolio\comm\lib" />
       <recent name="C:\Users\KOSTA\portfolio\comm\src\main\resources" />
       <recent name="C:\Users\KOSTA\portfolio\comm\src\main\webapp" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\User\portfolio\comm\src\main\webapp" />
-      <recent name="C:\Users\User\portfolio\comm\src\main\resources\static" />
-      <recent name="C:\Users\User\portfolio\comm\src\main\resources\icon" />
       <recent name="C:\Users\KOSTA\portfolio\comm\src\main\webapp\member" />
     </key>
   </component>
@@ -206,7 +207,11 @@
       <workItem from="1695010771870" duration="481000" />
       <workItem from="1695011278211" duration="2024000" />
       <workItem from="1695024071647" duration="9270000" />
-      <workItem from="1695047977059" duration="5064000" />
+      <workItem from="1695082000173" duration="75000" />
+      <workItem from="1695083022601" duration="1497000" />
+      <workItem from="1695092462845" duration="66000" />
+      <workItem from="1695096508604" duration="3194000" />
+      <workItem from="1695115694988" duration="4285000" />
     </task>
     <servers />
   </component>

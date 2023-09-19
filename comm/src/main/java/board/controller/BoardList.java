@@ -2,6 +2,8 @@ package board.controller;
 
 import board.Board;
 import board.BoardService;
+import region.SeoulRegion;
+import region.SeoulRegionService;
 
 import javax.servlet.*;
 import javax.servlet.annotation.WebServlet;
@@ -29,6 +31,11 @@ public class BoardList extends HttpServlet {
 
         if(no == null) currentPage = 1;
         else currentPage = Integer.parseInt(no);
+
+        SeoulRegionService seoulRegionService = new SeoulRegionService();
+        ArrayList<SeoulRegion> list = seoulRegionService.getSeoulAutonomyList();
+
+        request.setAttribute("seoulList", list);
         request.setAttribute("list", service.getPageRowCount(currentPage, PAGE_5));
         request.setAttribute("pages", (int)Math.ceil(Math.round((double)service.allBoardList().size()/PAGE_5)));
         request.setAttribute("currentPage", currentPage);

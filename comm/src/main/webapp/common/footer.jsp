@@ -1,16 +1,4 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: KOSTA
-  Date: 2023-09-19
-  Time: 오후 6:59
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
-  <head>
-    <title>$Title$</title>
-  </head>
-  <body>
-  $END$
-  </body>
-</html>
+<!-- Footer -->
+<footer class="container" style="background-color: black; min-height: 50px;">
+</footer>
+<!-- Footer -->
