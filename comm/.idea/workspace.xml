@@ -10,12 +10,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="00de42c8-500d-464d-8147-eaf2c054dbaa" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/당근.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/example.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/master/common/footer.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/master/common/menu.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/master/common/navbar.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/master/common/section.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/master/index.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sql" beforeDir="false" afterPath="$PROJECT_DIR$/db.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/board/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/board/list.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/common/menu.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/common/menu.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/common/nav.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/common/nav.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,6 +88,8 @@
       <recent name="C:\Users\KOSTA\portfolio\comm\src\main\webapp" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\KOSTA\portfolio\comm\src\main\webapp\master" />
+      <recent name="C:\Users\KOSTA\portfolio\comm\src\main\webapp\member\common" />
       <recent name="C:\Users\KOSTA\portfolio\comm\src\main\webapp\member" />
     </key>
   </component>
@@ -214,6 +217,7 @@
       <workItem from="1695182327652" duration="1460000" />
       <workItem from="1695202014888" duration="4447000" />
       <workItem from="1695206564149" duration="45000" />
+      <workItem from="1695635503264" duration="1545000" />
     </task>
     <servers />
   </component>
