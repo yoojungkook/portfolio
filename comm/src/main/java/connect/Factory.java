@@ -23,7 +23,7 @@ public class Factory {
 				sqlSessionFactory = new SqlSessionFactoryBuilder().build(reader);
 
 				//구현할 맵퍼 등록
-				Class[] mapper = { member.MemberDao.class, board.BoardDao.class, region.SeoulRegionDao.class };
+				Class[] mapper = { member.MemberDao.class, board.BoardDao.class, region.SeoulRegionDao.class, master.manage.dao.MemberManageDao.class };
 				for (Class m : mapper) {
 					//sqlSessionFactory에 맵퍼를 등록
 					sqlSessionFactory.getConfiguration().addMapper(m);

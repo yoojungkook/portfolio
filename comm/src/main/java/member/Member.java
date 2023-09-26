@@ -18,7 +18,7 @@ public class Member {
 	private Date birth;
 	private String phone;
 	private String autonomy;
-	private Date mDate;
+	private Date mdate;
 	private String photo;
 	private Date lastLog;
 	private Date logout;

@@ -10,13 +10,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="00de42c8-500d-464d-8147-eaf2c054dbaa" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/example.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/master/common/footer.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/master/common/menu.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/master/common/navbar.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/master/common/section.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/master/index.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/master/MasterController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/master/manage/dao/MemberManageDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/master/manage/service/MemberManageService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/master/member/list.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/connect/Factory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/connect/Factory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/member/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/member/Member.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/images/noti.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/images/noti_red.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/images/wall-e.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/master/common/navbar.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/master/common/navbar.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/master/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/master/index.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,8 +34,8 @@
       <list>
         <option value="HTML File" />
         <option value="Interface" />
-        <option value="Class" />
         <option value="New Servlet" />
+        <option value="Class" />
         <option value="Jsp File" />
       </list>
     </option>
@@ -218,6 +224,10 @@
       <workItem from="1695202014888" duration="4447000" />
       <workItem from="1695206564149" duration="45000" />
       <workItem from="1695635503264" duration="1545000" />
+      <workItem from="1695686126766" duration="42000" />
+      <workItem from="1695686841183" duration="8000" />
+      <workItem from="1695701594105" duration="2841000" />
+      <workItem from="1695718567769" duration="67000" />
     </task>
     <servers />
   </component>
